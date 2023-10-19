@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    padding: 1rem;
+}
+
+header, main, footer{
+    padding: 1rem;
+}
+
+header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header nav div {
+    display: flex;
+    gap: 1rem;
+}
+
+#logo {
+    text-decoration: none;
+}
+
+.navbar {
+    display: none;
+}
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+    border-radius: 13px;
+    box-shadow: 2px 2px 10px gray;
+    
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;  
+}
+
+.black-btn {
+    display: inline-block;
+    background-color: #171717;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+
+
+main {
+    grid-area: main;
+}
+
+main section img {
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    padding: 1rem 0;
+    justify-content: space-around;
+}
+
+#services h2{
+    
+}
+
+#services article {
+    max-width: 300px;
+}
+
+
+
+@media only screen and (min-width:600px) {
+    #grid-container {
+        grid-template-areas: "header header header";
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+
+    #ham, .fa-magnifying-glass {
+        display: none;
+    }
+
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-section img {
+        width: 50%;
+    }
+
+    .flex-section section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    .right img {
+        order:1;
+    }
+    
+}
